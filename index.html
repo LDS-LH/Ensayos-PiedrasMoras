@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumen de Ensayo - ADV Vectrino</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1f4e79;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background-color: #eef3f7;
+            padding: 15px;
+            border-left: 5px solid #1f4e79;
+            margin: 20px 0;
+        }
+
+        .links a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px;
+            background-color: #1f4e79;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        .links a:hover {
+            background-color: #163a59;
+        }
+
+        .grafico-bloque {
+            margin: 30px 0;
+        }
+
+        .grafico-titulo {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1f4e79;
+        }
+
+        .grafico-frame {
+            width: 100%;
+            min-height: 480px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background: #fff;
+        }
+        .boton-descarga {
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 10px;
+            padding: 8px 14px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .boton-descarga:hover {
+            background-color: #3e8e41;
+        }
+
+        .boton-descarga-json {
+            background-color: #2196F3;
+        }
+
+        .boton-descarga-json:hover {
+            background-color: #0b7dda;
+        }
+
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .grafico-frame {
+                min-height: 320px;
+            }
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Resumen del Ensayo</h1>
+
+    <div class="highlight">
+        <strong>Fecha del ensayo:</strong> 04/02/2026<br>
+        <strong>Instrumento:</strong> ADV Vectrino<br>
+        <strong>Duración de cada medición:</strong> 120 s
+    </div>
+
+    <h2>Configuración de adquisición</h2>
+    <ul>
+        <li>Frecuencia de registro configurada: <strong>50 Hz</strong></li>
+        <li>Configuración de sensado: <strong>1 muestra cada 80 ms</strong></li>
+        <li>Frecuencia efectiva de muestreo: <strong>12.5 Hz</strong></li>
+    </ul>
+
+    <p>
+        Para un próximo se hará muestrear el sensor a una frecuencia más alta y acorde a la frecuencia que se desea analizar.
+        <br>
+    </p>
+
+    <h2>Ensayos realizados</h2>
+
+    <ul>
+        <li>
+            <strong>Test 1:</strong> Manguera de 93 cm – duración 2 minutos  
+        </li>
+        <li>
+            <strong>Test 2:</strong> Manguera de 74 cm – duración 2 minutos  
+        </li>
+    </ul>
+
+    <h2>Visualización de resultados</h2>
+
+    <div class="links">
+        <a href="grafico_test1.html" target="_blank">
+            📈 Ver gráfico Test 1 (93 cm) en nueva pestaña
+        </a>
+        <a href="grafico_test2.html" target="_blank">
+            📈 Ver gráfico Test 2 (74 cm) en nueva pestaña
+        </a>
+        <a href="grafico_solapado_mca_relativo.html" target="_blank">
+            📊 Ver gráfico comparativo (Test 1 vs Test 2) en nueva pestaña
+        </a>
+    </div>
+
+    <div class="grafico-bloque">
+        <div class="grafico-titulo">Gráfico Test 1 (93 cm)</div>
+        <iframe class="grafico-frame" src="grafico_test1.html"></iframe>
+        <a class="boton-descarga" href="test1_93cm.csv" download>
+            ⬇ Descargar CSV
+        </a>
+        <a class="boton-descarga boton-descarga-json" href="test1_93cm.json" download>
+            ⬇ Descargar JSON
+        </a>
+    </div>
+    <div class="grafico-bloque">
+        <div class="grafico-titulo">Gráfico Test 2 (74 cm)</div>
+        <iframe class="grafico-frame" src="grafico_test2.html"></iframe>
+        <a class="boton-descarga" href="test2_74cm.csv" download>
+            ⬇ Descargar CSV
+        </a>
+        <a class="boton-descarga boton-descarga-json" href="test2_74cm.json" download>
+            ⬇ Descargar JSON
+        </a>
+    </div>
+    <div class="grafico-bloque">
+        <div class="grafico-titulo">Gráfico comparativo (Test 1 vs Test 2)</div>
+        <iframe class="grafico-frame" src="grafico_solapado_mca_relativo.html"></iframe>
+        <a class="boton-descarga" href="comparativo_test1_test2.csv" download>
+            ⬇ Descargar CSV
+        </a>
+        <a class="boton-descarga boton-descarga-json" href="comparativo_test1_test2.json" download>
+            ⬇ Descargar JSON
+        </a>
+    </div>
+
+    <footer>
+        Ruiz Tatur, Manuel A. (Electrónica)
+        Rodriguez, Luciano A. (Computación)
+        Beccaria, Federico (Electrónica)
+    </footer>
+
+</div>
+</body>
+</html>
